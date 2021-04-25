@@ -42,7 +42,7 @@ class ReFormatJson:
 
 	def saveToFile(self):
 		makeString = str(self.finalList)
-		with open('data.txt', 'w') as outfile:
+		with open('end.json', 'w') as outfile:
 			json.dump(makeString, outfile)
 
 
@@ -119,6 +119,7 @@ class ReFormatJson:
 
 	# I will make sure they find our headers
 	def headFinderManager(self):
+		print('Re Formating....')
 		# for each array object call the finders....
 		print('Re-formating Json')
 		print('this takes some time....')
