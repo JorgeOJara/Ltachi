@@ -119,7 +119,6 @@ class ReFormatJson:
 
 	# I will make sure they find our headers
 	def headFinderManager(self):
-		print('Re Formating....')
 		# for each array object call the finders....
 		print('Re-formating Json')
 		print('this takes some time....')
