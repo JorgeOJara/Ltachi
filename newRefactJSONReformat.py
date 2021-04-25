@@ -42,8 +42,8 @@ class ReFormatJson:
 
 	def saveToFile(self):
 		makeString = str(self.finalList)
-		with open('end.json', 'w') as json_file:
-			json.dump(makeString, json_file)
+		with open('data.txt', 'w') as outfile:
+			json.dump(makeString, outfile)
 
 
 	# header finders
@@ -120,6 +120,8 @@ class ReFormatJson:
 	# I will make sure they find our headers
 	def headFinderManager(self):
 		# for each array object call the finders....
+		print('Re-formating Json')
+		print('this takes some time....')
 		for eachObjactFromContent in range(len(self.content)):
 			self.findNameHeaders(eachObjactFromContent)
 			self.findLastNamesHeaders(eachObjactFromContent)
@@ -129,6 +131,5 @@ class ReFormatJson:
 			self.landlineHeaderFinder(eachObjactFromContent)
 			self.MailHeaderAddress(eachObjactFromContent)
 			self.finishObject['sms'] = "false"
-
-		self.saveToList(finishObject)
+			self.saveToList(self.finishObject)
 # done  ....
