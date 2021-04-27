@@ -6,10 +6,11 @@ from newCopyRefact import xslToJson
 
 class ReFormatJson:
 
-	def __init__(self,headers,content):
+	def __init__(self,headers,content,nameofFile):
 		# main globals
 		self.headers = headers
 		self.content = content
+		self.nameofFile = nameofFile
 		# headers global
 		self.namesToFind = ['name','full name','username','first name']
 		self.lastnamesToFind = ['last name','lastname','surname']
@@ -42,7 +43,7 @@ class ReFormatJson:
 
 	def saveToFile(self):
 		makeString = str(self.finalList)
-		with open('end.json', 'w') as outfile:
+		with open(self.nameofFile+'.json', 'w') as outfile:
 			json.dump(makeString, outfile)
 
 
