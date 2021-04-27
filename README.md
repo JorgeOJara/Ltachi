@@ -1,4 +1,4 @@
-# MakingAlistManager
+# Ltachi listMnager
 making a list manager for small business 
 
 
