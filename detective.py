@@ -1,4 +1,3 @@
-from difflib import SequenceMatcher
 class JonhTheDetective:
 	def __init__(self,content,valueYouwannacheck):
 		self.content = content
