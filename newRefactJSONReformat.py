@@ -79,7 +79,7 @@ class ReFormatJson:
 				divider =  self.headers[headerForMobile].split(" ")
 				if self.similar(findMobile,divider[0]) == 1.0:
 					if self.content[eachObjactFromContent][self.headers[headerForMobile]]!= "null":
-						mobilePhone.append(self.content[eachObjactFromContent][self.headers[headerForMobile]])
+						mobilePhone.append(int(self.content[eachObjactFromContent][self.headers[headerForMobile]]))
 		if len(mobilePhone) > 0:
 			self.finishObject['Mobile'] = mobilePhone
 
@@ -103,7 +103,7 @@ class ReFormatJson:
 				divider =  self.headers[headerForLandline].split(" ")
 				if self.similar(findLandline,divider[0]) == 1.0:
 					if self.content[eachObjactFromContent][self.headers[headerForLandline]]!= "null":
-						landlinebox.append(self.content[eachObjactFromContent][self.headers[headerForLandline]])
+						landlinebox.append(int(self.content[eachObjactFromContent][self.headers[headerForLandline]]))
 		if len(landlinebox) > 0:
 			self.finishObject['landLine'] = landlinebox
 

@@ -6,8 +6,9 @@ class guiDisplay:
 		self.content = content
 
 	def callThedetectiveJohn(self):
-		detectivejonh  = JonhTheDetective(self.content,self.valueIwannafind)
-		detectivejonh.givebackValue()
+		detectivejonh  = JonhTheDetective(self.content,self.valueIwannafind.get())
+		detectivejonh.findByphone()
+		print(detectivejonh.givebackValue())
 
 
 	def displaySearch(self):

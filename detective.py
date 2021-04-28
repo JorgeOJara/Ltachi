@@ -1,18 +1,35 @@
+from difflib import SequenceMatcher
 class JonhTheDetective:
 	def __init__(self,content,valueYouwannacheck):
 		self.content = content
-		self.valueYouwannacheck = valueYouwannacheck
-		self.finalContentValue =[] 
+		self.valueYouwannacheck = int(valueYouwannacheck)
+		self.finalContentValue =[]
 
-	def findByphone():
-		for x in range(len(content)):
-			for rows in range(len(content[x]['mobile'])):
-				if(content[x]['mobile'][rows] == self.valueYouwannacheck):
-					print("we have a match...")
+	def findByphone(self):
+		# 8635892236.0
+		for x in range(len(self.content)):
+			for rows in range(len(self.content[x]['Mobile'])):
+				if self.content[x]['Mobile'][rows] == self.valueYouwannacheck:
+					self.finalContentValue.append(self.content[x])
+					
+		if len(self.finalContentValue) > 0:
+			print('its a number')
+		else:
+			self.findBylandline()
 
+
+	def findBylandline(self):
+		# 8636763640
+		for x in range(len(self.content)):
+			for rows in range(len(self.content[x]['landLine'])):
+				if self.content[x]['landLine'][rows] == self.valueYouwannacheck:
+					self.finalContentValue.append(self.content[x])
+
+		if len(self.finalContentValue) > 0:
+			print('its a landline')
+		else:
+			print('not found..')
 	
-				# for end results
+
 	def givebackValue(self):
 		return self.finalContentValue
-
-
