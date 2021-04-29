@@ -131,6 +131,6 @@ class ReFormatJson:
 			self.findEmailHeaders(eachObjactFromContent)
 			self.landlineHeaderFinder(eachObjactFromContent)
 			self.MailHeaderAddress(eachObjactFromContent)
-			self.finishObject['sms'] = "false"
+			# self.finishObject['sms'] = "false"
 			self.saveToList(self.finishObject)
 # done  ....
