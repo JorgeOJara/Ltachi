@@ -1,4 +1,4 @@
-class JonhTheDetective:
+class SherlockHolmes:
 	def __init__(self,content,valueYouwannacheck):
 		self.content = content
 		self.valueYouwannacheck = int(valueYouwannacheck)
