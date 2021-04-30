@@ -24,8 +24,20 @@ class guiDisplay:
 		Button(text="find",width=25 , command = self.callThedetectiveJuan).grid(row=2, column=2)
 		Label(text="        ", width=30).grid(row=3, column=1)
 		Label(text="        ", width=30).grid(row=3, column=2)
+	
+	def makeLISTintoString(self,valueTORepair):
+		RepairDone = " ".join(str(x) for x in valueTORepair)
+		return RepairDone
+
 
 	def showContentFound(self):
-		messagebox.showinfo("Info", self.ContentFoundBydetective)
+		name = self.ContentFoundBydetective[-1]['name']
+		changeToString =  self.makeLISTintoString(self.ContentFoundBydetective[-1]['Full Adress'])
+		try:
+			lastname = self.ContentFoundBydetective[-1]['Last Name']
+		except IOError:
+			print('lastname its not on json....')
+
+		messagebox.showinfo("Info", name + "  " +  lastname +"  "+ changeToString)
 
 
