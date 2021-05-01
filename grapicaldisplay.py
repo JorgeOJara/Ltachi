@@ -31,6 +31,8 @@ class guiDisplay:
 
 
 	def showContentFound(self):
+		ID = self.ContentFoundBydetective[-1]['ID']
+
 		name = self.ContentFoundBydetective[-1]['name']
 		changeToString =  self.makeLISTintoString(self.ContentFoundBydetective[-1]['Full Adress'])
 		try:
@@ -38,6 +40,6 @@ class guiDisplay:
 		except IOError:
 			print('lastname its not on json....')
 
-		messagebox.showinfo("Info", name + "  " +  lastname +"  "+ changeToString)
+		messagebox.showinfo("Info", str(ID) + " " + name + "  " +  lastname +"  "+ changeToString)
 
 

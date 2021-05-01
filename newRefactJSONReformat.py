@@ -14,7 +14,7 @@ class ReFormatJson:
 		# headers global
 		self.namesToFind = ['name','full name','username','first name']
 		self.lastnamesToFind = ['last name','lastname','surname']
-		self.address = ["addres","Street Address","full addres","city","state","zip","zip code","area code"]
+		self.address = ["addres","Street Address","full addres","city","state","zip","zip code","area code","Property Address","Property State","Property Zip"]
 		self.mobilePhonesToFind =['phone','cell','number']
 		self.LandlineToFindIn =['landline']
 		self.EmailsToFindIn = ['email','emails']
@@ -121,9 +121,8 @@ class ReFormatJson:
 	# I will make sure they find our headers
 	def headFinderManager(self):
 		# for each array object call the finders....
-		print('Re-formating Json')
-		print('this takes some time....')
 		for eachObjactFromContent in range(len(self.content)):
+			self.finishObject['ID'] = eachObjactFromContent  + 2
 			self.findNameHeaders(eachObjactFromContent)
 			self.findLastNamesHeaders(eachObjactFromContent)
 			self.findAdressHeaders(eachObjactFromContent)
