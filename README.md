@@ -6,6 +6,10 @@ making a list manager for small business
 
 
 
-Just run The mainCaller script...
+Just run The exe file for windows...
 it only works With google sheets for now..
+
+
+if you wanna change code you just run the maincaller for testing...
+
 
