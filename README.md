@@ -1,4 +1,4 @@
-# L-tachi listManager
+# L-tachi Detective
 making a list manager for small business 
 
 
@@ -9,7 +9,4 @@ making a list manager for small business
 Just run The exe file for windows...
 it only works With google sheets for now..
 
-
-another one
-=======
 
